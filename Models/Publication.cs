@@ -13,14 +13,15 @@ namespace EBS
         public Publication(string company, double value, double drop, double variation, DateTime time) 
         {
             this.Company = company;
-            this.Value = Math.Round(value, 2);
-            this.Drop = Math.Round(drop,2);
-            this.Variation = Math.Round(variation, 2);
+            this.Value = value;
+            this.Drop = drop;
+            this.Variation = variation;
             this.Date = time;
         }
+
         public override string ToString()
         {
-            return $"Publication: {this.Company}, Value: {this.Value}, Drop: {this.Drop}, Variation: {this.Variation}, Date: {this.Date}";
+            return $"Publication: {this.Company}, Value: {this.Value}, Drop: {this.Drop}, Variation: {this.Variation}, Date: {this.Date.ToString("MM/dd/yyyy")}";
         }
     }
 }
